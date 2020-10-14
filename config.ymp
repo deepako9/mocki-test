@@ -1,9 +1,12 @@
-name: mocki
-port: 3000
+name: mock-service
 endpoints:
-  - path: /hello
-    method: get
-    responses:
-      - statusCode: 200
-        body:
-          message: Hello from Mocki!
+  - path: /random
+      method: get
+      behavior: random
+      responses:
+        - statusCode: 200
+          body:
+            color: red
+        - statusCode: 200
+          body:
+            color: black
